@@ -10,14 +10,14 @@ import java.net.Socket;
 
 public class ControllerServer extends Chatter {
 
-	public void start(TextField textField) throws IOException, ClassNotFoundException {
+	public void start(TextField textField, String name) throws IOException, ClassNotFoundException {
 
 		try (ServerSocket server = new ServerSocket(9000);
 		     Socket client = server.accept()) {
 
 			System.out.println("Connection established");
 
-			run(textField, client);
+			run(textField, client, name);
 
 
 		}

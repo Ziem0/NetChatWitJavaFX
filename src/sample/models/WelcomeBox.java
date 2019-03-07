@@ -8,7 +8,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-
 public class WelcomeBox {
 
 	public static String[] start() {

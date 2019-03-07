@@ -10,7 +10,7 @@ import java.net.Socket;
 
 public abstract class Chatter {
 
-	public void run(TextField textField, Socket client) throws IOException, ClassNotFoundException {
+	public void run(TextField textField, Socket client, String name) throws IOException, ClassNotFoundException {
 
 		ObjectOutputStream out = new ObjectOutputStream(client.getOutputStream());
 		ObjectInputStream in = new ObjectInputStream(client.getInputStream());
@@ -21,7 +21,7 @@ public abstract class Chatter {
 				try {
 					out.reset();
 					out.write(2);
-					out.writeObject(new Message("ania", textField.getText()));
+					out.writeObject(new Message(name, textField.getText()));
 					textField.clear();
 				} catch (IOException e1) {
 					e1.printStackTrace();

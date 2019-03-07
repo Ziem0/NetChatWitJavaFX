@@ -1,0 +1,16 @@
+.root {
+    -fx-background-color: darkseagreen;
+}
+
+.blackB {
+    -fx-background-color: black;
+}
+
+.whiteB {
+    -fx-background-color: whitesmoke;
+}
+
+.blueB {
+    -fx-background-color: blue;
+}
+
